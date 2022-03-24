@@ -1,6 +1,7 @@
 #global variable to record user_id
 $user_ids = []
 $user_limit_money = []
+$user_limit_money_of_month = []
 
 module DiscountRule
   class Base

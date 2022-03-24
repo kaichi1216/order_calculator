@@ -15,6 +15,7 @@
   OrderDiscountRule(訂單滿 X 元折 Y 元,此折扣在全站限用 N 次)
   OrderGetFreeItem(訂單滿兩百送造型玻璃杯)
   PersentDiscountOnOrder(訂單滿 x 元打 y 折)
+  OrderDiscountOfMonthRule(訂單滿 X 元折 Y 元,此折扣在全站每個月折扣上限為 N 元)
 
 流程:
   Cart 欄位有使用者id、商品數量及價格，將 cart 帶進 Calculator 後會算出此台購物車折扣金額、折扣後總價、折扣內容、並可以傳進 Order Class 生成訂單。

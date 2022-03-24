@@ -8,6 +8,7 @@ class Promotion
     res.push(DiscountRule::PersentDiscountOnOrder.new(cart: cart, order_price: cart.total_price, order_amount: 100, persent: 9).perform)
     res.push(DiscountRule::OrderDiscountRule.new(cart: cart, order_price: cart.total_price, order_price_rule: 400, discount_money: 20, use_count: 1).perform)
     res.push(DiscountRule::DiscountMoneyOnOrder.new(cart: cart, user_id: cart.user_id, order_price: cart.total_price, order_amount: 300, persent: 9, limit_money: 100).perform)
+    res.push(DiscountRule::OrderDiscountOfMonthRule.new(cart: cart, user_id: cart.user_id, order_price: cart.total_price).perform)
 
     result = res.each_with_object({total_discount: 0, discount_content:[]}) do |hash,result|
                result[:total_discount] += hash[:discount]

@@ -3,7 +3,6 @@ require_relative '../../model/user'
 require_relative '../../model/product'
 require_relative '../../model/cart'
 require_relative '../../model/promotion'
-require 'pry'
 
 describe Calculator do
   context "calculate items discount" do
@@ -61,11 +60,10 @@ describe Calculator do
       end
 
       res = Calculator.caculate(@cart_2)
-      
       expect(res[:original]).to eq(1000)
-      expect(res[:discount]).to eq(370)
-      expect(res[:final]).to eq(630)
-      expect(res[:discount_content].count).to eq(5)
+      expect(res[:discount]).to eq(420)
+      expect(res[:final]).to eq(580)
+      expect(res[:discount_content].count).to eq(6)
     end
   end
 end

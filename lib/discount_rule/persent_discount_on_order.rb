@@ -5,8 +5,6 @@ module DiscountRule
     DEFAULT_ORDER_AMOUNT = 100
     DEFAULT_DISCOUNT_PERSENT = 9
 
-    attr_reader :product_id, :discount_money
-
     def initialize(params = {})
       @order_amount = params[:order_amount] || DEFAULT_ORDER_AMOUNT
       @persent = params[:persent] || DEFAULT_DISCOUNT_PERSENT
